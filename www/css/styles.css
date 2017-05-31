@@ -32,8 +32,9 @@
   font-style: noraml;
   font-family: arial, helvetica, sans-serif;
   font-size: 1.2em;
-  color:#FFF;
+  /*color:#FFF;
   text-shadow: 1px 1px 4px #000000;
+  */
 }
 
 #storeLookup_div .list-block ul {
