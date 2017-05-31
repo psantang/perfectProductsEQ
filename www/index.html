@@ -27,12 +27,15 @@
 
     <!-- This template defaults to the iOS CSS theme. To support both iOS and material design themes, see the Framework7 Tutorial at the link below:
         http://www.idangero.us/framework7/tutorials/maintain-both-ios-and-material-themes-in-single-app.html
-     -->
+
 
     <link rel="stylesheet" href="lib/framework7/css/framework7.ios.min.css">
     <link rel="stylesheet" href="lib/framework7/css/framework7.ios.colors.min.css">
+   -->
 
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="lib/framework7/css/framework7-icons.css">
+    
 </head>
 
 <body>
@@ -75,7 +78,7 @@
                     <div class="page-content">
                         <div class="content-block">
                             <p>Page content goes here</p>
-                            
+
 
                         </div>
                         <div id='storeLookup_div'></div>
@@ -97,6 +100,24 @@
 
     <script type="text/javascript" src="cordova.js"></script>
     <script type="text/javascript" src="lib/framework7/js/framework7.min.js"></script>
+    <script>
+         (function () {
+           if (Framework7.prototype.device.android) {
+                 Dom7('head').append(
+                     '<link rel="stylesheet" href="lib/framework7/css/framework7.material.min.css">' +
+                     '<link rel="stylesheet" href="lib/framework7/css/framework7.material.colors.min.css">' +
+                     '<link rel="stylesheet" href="lib/framework7/css/my-app.material.css">' // use this as custom over ride for material design classes above
+                 );
+             }
+             else {
+                 Dom7('head').append(
+                     '<link rel="stylesheet" href="lib/framework7/css/framework7.ios.min.css">' +
+                     '<link rel="stylesheet" href="lib/framework7/css/framework7.ios.colors.min.css">' //+
+                     //'<link rel="stylesheet" href="lib/framework7/css/my-app.ios.css">'
+                 );
+             }
+         })();
+       </script>
     <script type="text/javascript" src="js/my-app.js"></script>
     <script type="text/javascript" src="js/storeLookup.js"></script>
 </body>

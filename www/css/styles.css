@@ -27,7 +27,7 @@
   color:#FFF;
   text-shadow: 2px 2px 4px #000000;
 }
- 
+
 #storeLookup_div {
   font-style: noraml;
   font-family: arial, helvetica, sans-serif;
@@ -57,4 +57,12 @@
 .location_container {
   color:#000;
   background-color: rgba(255,255,255,.6);
+}
+
+.valign_middle {
+  vertical-align: middle;
+}
+
+.phoneLink, .webLink {
+  padding: .4em 0;
 }
