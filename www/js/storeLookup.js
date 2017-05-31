@@ -69,8 +69,10 @@ function getStoreLocations() {
     str+="<div class='bold'>"+storesObj[i].sl_store+"</div>";
     str+="<div>"+storesObj[i].sl_address+" "+storesObj[i].sl_address2+" </div>";
     str+="<div>"+storesObj[i].sl_city+", "+storesObj[i].sl_state+" "+storesObj[i].sl_zip+"</div>";
-    str+="<div><a href='tel:"+storesObj[i].sl_phone+"'>"+storesObj[i].sl_phone+"</a></div>";
-    str+="<div><a href='geo:"+storesObj[i].sl_latitude+","+storesObj[i].sl_longitude+"'>Open Map</a></div>";
+    //str+="<div><a href='tel:"+storesObj[i].sl_phone+"'>"+storesObj[i].sl_phone+"</a></div>";
+    str+="<div><a href='#' onclick=\"window.open('tel:"+storesObj[i].sl_phone+"')\";>"+storesObj[i].sl_phone+"</a></div>";
+    //str+="<div><a href='geo:"+storesObj[i].sl_latitude+","+storesObj[i].sl_longitude+"'>Open Map</a></div>";
+    str+="<div><a href='#' onclick=\"window.open('geo:"+storesObj[i].sl_latitude+","+storesObj[i].sl_longitude+"', '_system', 'location=no')\";>Open Map</a></div>";
     //str+="<div><a href='"+storesObj[i].sl_url+"' target='_system'>"+storesObj[i].sl_url+"</a></div>";
     str+="<div><a href='#' onclick=\"window.open('"+storesObj[i].sl_url+"', '_system', 'location=no')\";>"+storesObj[i].sl_url+"</a></div>";
 
