@@ -20,7 +20,6 @@ function getStores() {
     statesList += '</select></div></div></div></li></ul></div>';
     $$("#storeLookup_div").html(statesList).trigger('create');
 
-
     }, timout: 5000
 
     , beforeSend: function(){
@@ -39,7 +38,6 @@ function getStores() {
     }
   }) // END ajax function for ski brands
 }
-
 
 function getStoreLocations() {
 		//$$('#factory_year,#factory_length').empty(); // REMOVE ALL OTHERS

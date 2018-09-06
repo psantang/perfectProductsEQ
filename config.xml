@@ -65,10 +65,8 @@
         <splash height="480" platform="ios" src="www/res/screen/ios/Default~iphone.png" width="320" />
     </platform>
 
-
     <access origin="tel:*" launch-external="yes" />
     <access origin="geo:*" launch-external="yes" />
-
 
     <allow-intent href="http://*/*" />
     <allow-intent href="https://*/*" />
@@ -88,10 +86,5 @@
         <preference name="BackupWebStorage" value="none" />
     </platform>
     <preference name="DisallowOverscroll" value="true" />
-
-
-
-
-
 
 </widget>
