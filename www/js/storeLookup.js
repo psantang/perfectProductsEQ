@@ -1,7 +1,7 @@
 
 function getStores() {
   console.log('getStores function');
-  var url='http://www.perfectproductseq.com/ws/ws_store_locations_by_state_ret_json.php';
+  var url='https://perfectproductseq.com/ws/ws_store_locations_by_state_ret_json.php';
 
   $$.ajax({url:url,data:{ getBy: "state"},type:'POST',dataType: 'json',success:function(StatesObj) {
     console.log('in success for stateLookup');
@@ -46,7 +46,7 @@ function getStoreLocations() {
 		//$('#factory_current,#factory_my_name,#factory_submit').hide();// HIDE THESE
 		theState = ( $$('#states').val() );
     console.log('theState = ' + theState)
-    var url='http://www.perfectproductseq.com/ws/ws_store_lookup_ret_json.php';
+    var url='https://perfectproductseq.com/ws/ws_store_lookup_ret_json.php';
 
 		$$.ajax({url:url,data:{ state:theState },type:'POST',dataType: 'json',success:function(storesObj) {
 
