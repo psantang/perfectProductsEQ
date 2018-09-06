@@ -3,8 +3,6 @@ var isIos = Framework7.prototype.device.ios === true;
 
 // Initialize app
 var myApp = new Framework7();
-
-
 // If we need to use custom DOM library, let's save it to $$ variable:
 var $$ = Dom7;
 
@@ -21,12 +19,11 @@ $$(document).on('deviceready', function() {
     getStores();
 
     $$(document).on('change', '#states', function () {
-      console.log('states input id changed');
+      console.log('states input id changed here');
       getStoreLocations();
     });
 
 });
-
 
 // Now we need to run the code that will be executed only for About page.
 
@@ -35,7 +32,6 @@ myApp.onPageInit('about', function (page) {
     // Do something here for "about" page
 
 })
-
 // Option 2. Using one 'pageInit' event handler for all pages:
 $$(document).on('pageInit', function (e) {
     // Get page data from event data
