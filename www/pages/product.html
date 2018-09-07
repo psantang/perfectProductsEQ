@@ -1,0 +1,50 @@
+{{#if @global.ios}}
+<div class="navbar">
+    <div class="navbar-inner">
+      <div class="left"><a href="/index/" class="link back"><i class="icon icon-back"></i><span class="ios-only">Back</span></a></div>
+        <!-- We need cool sliding animation on title element, so we have additional "sliding" class -->
+        <div class="center sliding">Product</div>
+        <div class="right"><a href="#" class="link" id="editProfileBtn"></a></div>
+    </div>
+</div>
+{{/if}}
+    <!-- Page, "data-page" contains page name -->
+    <div data-page="profile" class="page" id="profilePage_div">
+
+{{#if @global.android}}
+      <div class="navbar">
+          <div class="navbar-inner">
+            <div class="left"><a href="/index/" class="link back"><i class="icon icon-back"></i><span class="ios-only">Back</span></a></div>
+              <!-- We need cool sliding animation on title element, so we have additional "sliding" class -->
+              <div class="center sliding">Product</div>
+              <div class="right"><a href="#" class="link" id="editProfileBtn"></a></div>
+          </div>
+      </div>
+{{/if}}
+        <!-- Scrollable page content -->
+        <div class="page-content">
+            <div class="block"></div>
+
+                <div class="block-title bold">User<span id="errorUser" class="redText"></span></div>
+
+                <div class="location_container">
+
+                  <form id="pp_order_form" action="https://perfectproductseq.foxycart.com/cart" method="post">
+                    <input type="hidden" name="name||457c411ee28c2eb08a8a7eae0887e905eb1e6ec7a0d3da8918de0e9fef825f7e" value="Perfect Prep Extreme" />
+                    <input type="hidden" name="code||c5d03b2b8ce811d18c4c5a6e17d656654f9a13a4a44e027b6e6815c5db865b01" value="PPX" />
+                	<input type="hidden" id="pp_price" name="price||1176c4348f6c08394f391a01174bd3dcd8a884a09f3a5b614ae3394218e82424" value="21.00" />
+                	<input type="text" id="pp_quantity" name="quantity||d848fce1603fe624cbb2a5ae6b8fbd556afd1da350831248f75a0b829294c463" value="1" />
+                	<input type="submit" value="Add To Cart" />
+                </form>
+
+
+                </div>
+
+
+
+
+
+
+
+          <!-- </div>  END CONTENT BLOCK -->
+        </div> <!-- END PAGE CONTENT -->
