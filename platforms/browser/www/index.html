@@ -12,7 +12,14 @@
 
     <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *">
 -->
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self' gap://ready file://* *; style-src 'self' 'unsafe-inline'; script-src https://*.perfectproductseq.com 'self' 'unsafe-inline' 'unsafe-eval'; img-src 'self' data: ; connect-src https://*.perfectproductseq.com ws: 'self' ">
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self' gap://ready file://* *;
+      style-src https://*.foxycart.com 'self' 'unsafe-inline';
+      script-src https://*.perfectproductseq.com https://*.foxycart.com http://*.google-analytics.com https://*.facebook.net 'self' 'unsafe-inline' 'unsafe-eval';
+      img-src https://*.foxycart.com http://*.foxycart.com http://*.google-analytics.com https://*.google.com https://*.facebook.com 'self' data: ;
+      connect-src https://*.perfectproductseq.com  https://*.foxycart.com ws: 'self'
+    ">
 
     <!-- Required meta tags-->
     <meta charset="utf-8">
@@ -31,12 +38,15 @@
     <link rel="stylesheet" href="lib/framework7/css/framework7.ios.colors.min.css">
    -->
 
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="lib/framework7/css/framework7-icons.css">
+    <link rel="stylesheet" type="text/css" href="css_my/styles.css">
+    <link rel="stylesheet" type="text/css" href="css_my/framework7-icons.css">
+    <link rel="stylesheet" type="text/css" href="css_my/animate.min.css">
+
 
 </head>
 
 <body>
+  <div id="app">
     <!-- Status bar overlay for full screen mode (PhoneGap) -->
     <div class="statusbar-overlay"></div>
 
@@ -52,8 +62,10 @@
     <!-- Views -->
     <div class="views">
         <!-- Your main view, should have "view-main" class -->
-        <div class="view view-main">
+        <div class="view view-main view-init ios-edges"  data-url="/">
             <!-- Top Navbar-->
+
+
             <div class="navbar">
                 <div class="navbar-inner">
                     <!-- We need cool sliding animation on title element, so we have additional "sliding" class -->
@@ -68,22 +80,25 @@
                     </div>
                 </div>
             </div>
+
+
+
             <!-- Pages container, because we use fixed-through navbar and toolbar, it has additional appropriate classes-->
-            <div class="pages navbar-through toolbar-through">
+            <!--<div class="pages navbar-through toolbar-through">-->
                 <!-- Page, "data-page" contains page name -->
                 <div data-page="index" class="page">
                     <!-- Scrollable page content -->
                     <div class="page-content">
                         <div class="content-block">
                             <p class='center_align font1_25 bold'>Search Perfect Product dealers near you!</p>
-
+                            <div><a class="button button-fill" href="/product/">Product</a></div>
 
                         </div>
                         <div id='storeLookup_div'></div>
                         <div id='storesList_div'></div>
                     </div>
                 </div>
-            </div>
+            <!--</div> -->
             <!-- Bottom Toolbar-->
             <!--
             <div class="toolbar">
@@ -95,29 +110,43 @@
           -->
         </div>
     </div>
-
+  </div>
     <script type="text/javascript" src="cordova.js"></script>
-    <script type="text/javascript" src="lib/framework7/js/framework7.min.js"></script>
+    <script type="text/javascript" src="js/framework7.min.js"></script>
+
     <script>
-         (function () {
-           if (Framework7.prototype.device.android) {
-                 Dom7('head').append(
-                     '<link rel="stylesheet" href="lib/framework7/css/framework7.material.min.css">' +
-                     '<link rel="stylesheet" href="lib/framework7/css/framework7.material.colors.min.css">' +
-                     '<link rel="stylesheet" href="lib/framework7/css/my-app.material.css">' // use this as custom over ride for material design classes above
-                 );
-             }
-             else {
-                 Dom7('head').append(
-                     '<link rel="stylesheet" href="lib/framework7/css/framework7.ios.min.css">' +
-                     '<link rel="stylesheet" href="lib/framework7/css/framework7.ios.colors.min.css">' //+
-                     //'<link rel="stylesheet" href="lib/framework7/css/my-app.ios.css">'
-                 );
-             }
-         })();
-       </script>
-    <script type="text/javascript" src="js/my-app.js"></script>
-    <script type="text/javascript" src="js/storeLookup.js"></script>
+  (function () {
+    if (Framework7.prototype.device.android) {
+          Dom7('head').append(
+              '<link rel="stylesheet" href="css/framework7.md.min.css">'// +
+              //'<link rel="stylesheet" href="dist/css/framework7.ltr.md.min.css">' +
+              //'<link rel="stylesheet" href="dist/css/framework7.md.css">' // use this as custom over ride for material design classes above
+             // '<link rel="stylesheet" href="/css/framework7.material.min.css">' +
+             // '<link rel="stylesheet" href="/css/framework7.material.colors.min.css">' +
+             // '<link rel="stylesheet" href="/css/my-app.material.css">'
+          );
+      }
+      else {
+          Dom7('head').append(
+              '<link rel="stylesheet" href="css/framework7.ios.min.css">'// +
+              //'<link rel="stylesheet" href="dist/css/framework7.ltr.ios.min.css">' //+
+              //'<link rel="stylesheet" href="lib/framework7/css/my-app.ios.css">'
+              //'<link rel="stylesheet" href="/css/framework7.ios.min.css">' +
+              //'<link rel="stylesheet" href="/css/framework7.ios.colors.min.css">' //+
+          );
+      }
+  })();
+</script>
+
+    <script type="text/javascript" src="js_my/routes.js"></script>
+    <script type="text/javascript" src="js_my/my-app.js"></script>
+    <script type="text/javascript" src="js_my/storeLookup.js"></script>
+
+
+    <!-- FOXYCART -->
+    <script data-cfasync="false" src="https://cdn.foxycart.com/perfectproductseq/loader.js" async defer></script>
+    <!-- /FOXYCART -->
+
 </body>
 
 </html>
