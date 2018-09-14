@@ -46,6 +46,7 @@ var myApp = new Framework7({
     on: {
       pageInit(page) {
        console.log('myApp - on pageInit for page ' +page)
+
      }
    }
 
@@ -54,6 +55,7 @@ var myApp = new Framework7({
 // Handle Cordova Device Ready Event
 $$(document).on('deviceready', function() {
     console.log("Device is ready!");
+
 /*
     getStores();
 
@@ -83,3 +85,29 @@ $$(document).on('pageInit', '.page[data-page="about"]', function (e) {
     // Following code will be executed for page with data-page attribute equal to "about"
     myApp.alert('Here comes About page');
 })
+
+
+document.addEventListener("DOMContentLoaded", function() {
+    console.log("Vanilla JS - DOM loaded...");
+      if (window.jQuery) {
+          // jQuery is loaded
+          console.log("jQuery is loaded!");
+      } else {
+          // jQuery is not loaded
+          console.log("jQuery is not loaded");
+      }
+});
+
+window.onload = function () {
+  console.log("Vanilla JS - WINDOW loaded...");
+  setTimeout( function() {
+    if (window.jQuery) {
+        // jQuery is loaded
+        console.log("jQuery is loaded!");
+    } else {
+        // jQuery is not loaded
+        console.log("jQuery is not loaded");
+    }
+  }, 1000);
+
+}

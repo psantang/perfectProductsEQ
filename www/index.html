@@ -12,6 +12,15 @@
 
     <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *">
 -->
+
+<!-- BELOW IS ALL OPEN / NO SECURITY FOR TESTING ONLY -->
+<meta http-equiv="Content-Security-Policy"
+          content="default-src *;
+                   style-src 'self' 'unsafe-inline' 'unsafe-eval';
+                   script-src 'self' 'unsafe-inline' 'unsafe-eval';">
+
+<!-- BELOW IS FOR URL SPECIFIC ALLOCATIONS / MORE SECURE -->
+<!--
     <meta
       http-equiv="Content-Security-Policy"
       content="default-src 'self' gap://ready file://* *;
@@ -20,7 +29,7 @@
       img-src https://*.foxycart.com http://*.foxycart.com http://*.google-analytics.com https://*.google.com https://*.facebook.com http://*.perfectproductseq.com https://*.perfectproductseq.com 'self' data: ;
       connect-src https://*.perfectproductseq.com  https://*.foxycart.com ws: 'self'
     ">
-
+-->
     <!-- Required meta tags-->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
@@ -92,6 +101,8 @@
                         <div class="content-block">
                             <p class='center_align font1_25 bold'>Search Perfect Product dealers near you!</p>
                             <div><a class="button button-fill" href="/product/">Product</a></div>
+                            <br /><br />
+                            <div><a class="button button-fill" href="https://www.google.com">GOOGLE</a></div>
 
                         </div>
                         <div id='storeLookup_div'></div>
@@ -143,9 +154,16 @@
     <script type="text/javascript" src="js_my/storeLookup.js"></script>
 
 
-    <!-- FOXYCART -->
+    <!-- FOXYCART-->
     <script data-cfasync="false" src="https://cdn.foxycart.com/perfectproductseq/loader.js" async defer></script>
-    <!-- /FOXYCART -->
+
+
+    <!--<script data-cfasync="false" src="https://cdn.foxycart.com/perfectproductseq/foxycart.jsonp.sidecart.min.js" async defer></script>
+     /FOXYCART -->
+
+    <script>
+
+    </script>
 
 </body>
 

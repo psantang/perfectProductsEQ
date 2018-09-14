@@ -11,13 +11,9 @@
         Paul Santangelo Software, Inc.
     </author>
     <content src="index.html" />
+    <allow-navigation href="*" />
+    <allow-intent href="*" />
     <access origin="*" />
-    <allow-intent href="http://*/*" />
-    <allow-intent href="https://*/*" />
-    <allow-intent href="tel:*" />
-    <allow-intent href="sms:*" />
-    <allow-intent href="mailto:*" />
-    <allow-intent href="geo:*" />
     <icon src="www/images/pp_seal_125x125.png" />
     <preference name="phonegap-version" value="cli-7.1.0" />
     <preference name="DisallowOverscroll" value="true" />
