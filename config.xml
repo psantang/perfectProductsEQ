@@ -8,14 +8,21 @@
         Paul Santangelo Software, Inc.
     </author>
     <content src="index.html" />
+
+    <allow-navigation href="*" />
+    <allow-intent href="*" />
+    <access origin="*" /> <!-- Required for iOS9+ as IOS does not use the whitelist plugin -->
+
+<!--
     <access origin="*" />
+    <allow-navigation href="*" />
     <allow-intent href="http://*/*" />
     <allow-intent href="https://*/*" />
     <allow-intent href="tel:*" />
     <allow-intent href="sms:*" />
     <allow-intent href="mailto:*" />
     <allow-intent href="geo:*" />
-
+-->
     <preference name="phonegap-version" value="cli-7.1.0" />
 
     <platform name="android">
