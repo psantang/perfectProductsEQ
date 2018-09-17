@@ -23,9 +23,11 @@
 -->
 <!-- BELOW IS FOR URL SPECIFIC ALLOCATIONS / MORE SECURE BUT DID NOT ALLOW THE FOXYCART HTML PAGE TO LOAD-->
 
+
+<!--   default-src 'self' https://*.foxycart.com http://*.foxycart.com http://*.google-analytics.com https://*.google-analytics.com https://*.google.com https://*.facebook.com http://*.perfectproductseq.com https://*.perfectproductseq.com https://perfectproductseq.com http://perfectproductseq.com gap://ready file://* *; -->
     <meta
       http-equiv="Content-Security-Policy" content="
-      default-src 'self' https://*.foxycart.com http://*.foxycart.com http://*.google-analytics.com https://*.google-analytics.com https://*.google.com https://*.facebook.com http://*.perfectproductseq.com https://*.perfectproductseq.com https://perfectproductseq.com http://perfectproductseq.com gap://ready file://* *;
+      default-src *;
       style-src https://*.foxycart.com 'self' 'unsafe-inline';
       script-src https://*.perfectproductseq.com https://*.foxycart.com http://*.google-analytics.com https://*.facebook.net 'self' 'unsafe-inline' 'unsafe-eval';
       img-src https://*.foxycart.com http://*.foxycart.com http://*.google-analytics.com https://*.google-analytics.com https://*.google.com https://*.facebook.com http://*.perfectproductseq.com https://*.perfectproductseq.com https://perfectproductseq.com http://perfectproductseq.com 'self' data: ;
