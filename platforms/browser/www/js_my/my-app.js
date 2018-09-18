@@ -56,6 +56,32 @@ var myApp = new Framework7({
 $$(document).on('deviceready', function() {
     console.log("Device is ready!");
 
+
+    var head = document.getElementsByTagName("head")[0];
+    head.addEventListener("load", function(event) {
+        if (event.target.nodeName === "SCRIPT") {
+          theSrc=event.target.getAttribute("src");
+          console.log("############# Script loaded: " + theSrc);
+
+          if (theSrc.match(/https:\/\/perfectproductseq.foxycart.com\/cart\?fcsid/gi)) {
+            console.log("^^^^^^^^^^^^ CART HREF: " + theSrc);
+            /*
+            cl=$$(".fc-action--checkout--button");
+
+            console.log("classList is " + cl[0].classList.value);
+
+            //$$(".fc-action--checkout--button").addClass("external");
+            $$(".fc-action--payment--checkout a").addClass("external");
+
+            console.log("classList is NOW " + cl[0].classList.value);
+            */
+          }
+
+
+        }
+    }, true);
+
+
 /*
     getStores();
 
