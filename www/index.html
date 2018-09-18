@@ -17,17 +17,17 @@
 <!-- AND IT WORKS FOR END TO END PURCHASES with config.xml settings of allow-navigation allow-intent and origin all set to * -->
 
 <!--<meta http-equiv="Content-Security-Policy"
-          content="default-src * gap://ready;
+          content="default-src *;
                    style-src 'self' 'unsafe-inline' 'unsafe-eval';
                    script-src 'self' 'unsafe-inline' 'unsafe-eval';">-->
 
                    <meta
                      http-equiv="Content-Security-Policy" content="
-                     default-src * gap://ready;
-                     style-src https://*.foxycart.com 'self' 'unsafe-inline';
-                     script-src https://*.perfectproductseq.com https://*.foxycart.com http://*.google-analytics.com https://*.facebook.net 'self' 'unsafe-inline' 'unsafe-eval';
-                     img-src https://*.foxycart.com http://*.foxycart.com http://*.google-analytics.com https://*.google-analytics.com https://*.google.com https://*.facebook.com http://*.perfectproductseq.com https://*.perfectproductseq.com https://perfectproductseq.com http://perfectproductseq.com 'self' data: ;
-                     connect-src https://*.foxycart.com http://*.foxycart.com http://*.google-analytics.com https://*.google-analytics.com https://*.google.com https://*.facebook.com http://*.perfectproductseq.com https://*.perfectproductseq.com https://perfectproductseq.com http://perfectproductseq.com 'self' ws:
+                     default-src * gap://ready 'unsafe-inline' 'unsafe-eval';
+                     style-src https://*.foxycart.com http://*.foxycart.com http://*.google-analytics.com https://*.google-analytics.com https://*.google.com http://*.google.com https://*.facebook.com http://*.facebook.com http://*.perfectproductseq.com https://*.perfectproductseq.com 'self' 'unsafe-inline' 'unsafe-eval';
+                     script-src https://*.foxycart.com http://*.foxycart.com http://*.google-analytics.com https://*.google-analytics.com https://*.google.com http://*.google.com https://*.facebook.com http://*.facebook.com http://*.perfectproductseq.com https://*.perfectproductseq.com https://*.facebook.net 'self' 'unsafe-inline' 'unsafe-eval';
+                     img-src https://*.foxycart.com http://*.foxycart.com http://*.google-analytics.com https://*.google-analytics.com https://*.google.com http://*.google.com https://*.facebook.com http://*.facebook.com http://*.perfectproductseq.com https://*.perfectproductseq.com 'self' 'unsafe-inline' 'unsafe-eval' data: ;
+                     connect-src https://*.foxycart.com http://*.foxycart.com http://*.google-analytics.com https://*.google-analytics.com https://*.google.com http://*.google.com https://*.facebook.com http://*.facebook.com http://*.perfectproductseq.com https://*.perfectproductseq.com 'self' 'unsafe-inline' 'unsafe-eval' ws:
                    ">
 
 <!-- BELOW IS FOR URL SPECIFIC ALLOCATIONS / MORE SECURE BUT DID NOT ALLOW THE FOXYCART HTML PAGE TO LOAD-->
