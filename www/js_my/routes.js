@@ -8,6 +8,16 @@ var routes = [
         pageInit: function () {
           // do something on page init
           console.log(" ------ > page init in route.js for home page");
+
+          anc=$$("a[href^='https://']");
+          for(i=0;i<anc.length;i++) {
+            $$(anc[i]).addClass("external");
+            console.log(" added external class to href anc="+anc[i].href);
+          }
+
+          console.log(" added external class to href ");
+
+
           getStores();
 
           $$(document).on('change', '#states', function () {
@@ -18,6 +28,7 @@ var routes = [
       },  // END PAGEINIT
         pageAfterIn: function () {
           console.log(" ------ > page After In in route.js for home page");
+
         }
     }
   }, // END INDEX / HOME
@@ -31,6 +42,18 @@ var routes = [
           // do something on page init
           console.log(" ------ > page init in route.js for product page");
 
+          anc=$$("a[href^='https://']");
+          for(j=0;j<anc.length;j++) {
+            $$(anc[j]).addClass("external");
+            console.log(" added external class to href anc="+anc[j].href);
+          }
+
+/*
+          $$('.fc-action--payment--checkout a').click(function() {
+            console.log('----------click on checkout detected in router!');
+            $$(".fc-action--payment--checkout a").addClass("external");
+          });
+*/
 
 
         },
