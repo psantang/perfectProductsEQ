@@ -11,7 +11,7 @@
 
     <allow-navigation href="*" /> <!-- IOS and ANDROID -->
     <allow-intent href="*" /> <!-- ANDROID -->
-    <access origin="*" allows-arbitrary-loads-for-media="true" allows-arbitrary-loads-in-web-content="true" allows-local-networking="true" /><!-- these attributes are for IOS 10 and above)
+    <access origin="*" /><!-- these attributes are for IOS 10 and above)
     <!--<access origin="*" />  IOS and ANDROID --><!-- Required for iOS9+ as IOS does not use the whitelist plugin -->
 
 <!--
