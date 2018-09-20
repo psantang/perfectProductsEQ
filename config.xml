@@ -45,6 +45,9 @@
     <plugin name="cordova-plugin-globalization" source="npm" />
     <plugin name="cordova-plugin-network-information" source="npm" />
     <!--<plugin name="cordova-plugin-inappbrowser" source="npm" />-->
+    <gap:plugin name="cordova-plugin-customurlscheme" source="npm">
+      <param name="URL_SCHEME" value="perfprodapp" />
+    </gap:plugin>
 
 
 
