@@ -55,6 +55,18 @@ var routes = [
           });
 */
 
+        // THIS IS TO SET A SESSION VARIABLE ON FOXYCART TO INDICATE PURCHASE IS FROM App
+        /*
+        var FC = FC || {};
+        FC.onLoad = function() {
+          FC.client.on("ready.done", function() { */
+              if (!FC.json.custom_fields.hasOwnProperty("source") ) {
+                  FC.client.request('https://' + FC.json.config.store_domain + '/cart?h:source=app');
+                  console.log("!!!!!!!!!!!!! source=app custom field set");
+              }
+        //  });
+        //}
+
 
         },
         pageAfterIn: function (e, page) {
