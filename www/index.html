@@ -24,10 +24,10 @@
                    <meta
                      http-equiv="Content-Security-Policy" content="
                      default-src * gap://ready 'unsafe-inline' 'unsafe-eval';
-                     style-src https://*.foxycart.com http://*.foxycart.com http://*.google-analytics.com https://*.google-analytics.com https://*.google.com http://*.google.com https://*.facebook.com http://*.facebook.com http://*.perfectproductseq.com https://*.perfectproductseq.com 'self' 'unsafe-inline' 'unsafe-eval';
-                     script-src https://*.foxycart.com http://*.foxycart.com http://*.google-analytics.com https://*.google-analytics.com https://*.google.com http://*.google.com https://*.facebook.com http://*.facebook.com http://*.perfectproductseq.com https://*.perfectproductseq.com https://*.facebook.net 'self' 'unsafe-inline' 'unsafe-eval';
-                     img-src https://*.foxycart.com http://*.foxycart.com http://*.google-analytics.com https://*.google-analytics.com https://*.google.com http://*.google.com https://*.facebook.com http://*.facebook.com http://*.perfectproductseq.com https://*.perfectproductseq.com 'self' 'unsafe-inline' 'unsafe-eval' data: ;
-                     connect-src https://*.foxycart.com http://*.foxycart.com http://*.google-analytics.com https://*.google-analytics.com https://*.google.com http://*.google.com https://*.facebook.com http://*.facebook.com http://*.perfectproductseq.com https://*.perfectproductseq.com 'self' 'unsafe-inline' 'unsafe-eval' ws:
+                     style-src https://*.foxycart.com http://*.foxycart.com http://*.google-analytics.com https://*.google-analytics.com https://*.google.com http://*.google.com https://*.facebook.com http://*.facebook.com http://*.perfectproductseq.com https://*.perfectproductseq.com http://*.paulsantangelo.com 'self' 'unsafe-inline' 'unsafe-eval';
+                     script-src https://*.foxycart.com http://*.foxycart.com http://*.google-analytics.com https://*.google-analytics.com https://*.google.com http://*.google.com https://*.facebook.com http://*.facebook.com http://*.perfectproductseq.com https://*.perfectproductseq.com https://*.facebook.net http://*.paulsantangelo.com 'self' 'unsafe-inline' 'unsafe-eval';
+                     img-src https://*.foxycart.com http://*.foxycart.com http://*.google-analytics.com https://*.google-analytics.com https://*.google.com http://*.google.com https://*.facebook.com http://*.facebook.com http://*.perfectproductseq.com https://*.perfectproductseq.com http://*.paulsantangelo.com 'self' 'unsafe-inline' 'unsafe-eval' data: ;
+                     connect-src https://*.foxycart.com http://*.foxycart.com http://*.google-analytics.com https://*.google-analytics.com https://*.google.com http://*.google.com https://*.facebook.com http://*.facebook.com http://*.perfectproductseq.com https://*.perfectproductseq.com http://*.paulsantangelo.com 'self' 'unsafe-inline' 'unsafe-eval' ws:
                    ">
 
 <!-- BELOW IS FOR URL SPECIFIC ALLOCATIONS / MORE SECURE BUT DID NOT ALLOW THE FOXYCART HTML PAGE TO LOAD-->
@@ -115,8 +115,9 @@
                             <p class='center_align font1_25 bold'>Search Perfect Product dealers near you!</p>
                             <div><a class="button button-fill" href="/product/">Product</a></div>
                             <br /><br />
-                            <div><a class="button button-fill" href="https://www.google.com">GOOGLE</a></div>
-
+                            <div><a class="button button-fill external" href="https://www.google.com">GOOGLE</a></div>
+                            <br /><br />
+                            <div><a class="button button-fill external" href="http://paulsantangelo.com/node/">PS.COM</a></div>
                         </div>
                         <div id='storeLookup_div'></div>
                         <div id='storesList_div'></div>
@@ -168,7 +169,9 @@
 
 
     <!-- FOXYCART-->
-    <script data-cfasync="false" src="https://cdn.foxycart.com/perfectproductseq/loader.js" async defer></script>
+    <!--<script data-cfasync="false" src="https://cdn.foxycart.com/perfectproductseq/loader.js" async defer></script>-->
+
+    <script data-cfasync="false" src="https://cdn.foxycart.com/perfectproductseq-ls/loader.js" async defer></script>
 
 
     <!--<script data-cfasync="false" src="https://cdn.foxycart.com/perfectproductseq/foxycart.jsonp.sidecart.min.js" async defer></script>
